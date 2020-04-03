@@ -1,4 +1,5 @@
 $primary-color: #167;
+// d8b pinkish
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
@@ -26,6 +27,15 @@ $background-opacity: 0.9;
       z-index: -1;
       background: rgba($primary-color, $background-opacity);
     }
+  }
+}
+
+// set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
   }
 }
 
