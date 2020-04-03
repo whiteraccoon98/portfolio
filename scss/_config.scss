@@ -8,7 +8,7 @@ $portrait-image-small: url(../img/portrait150.jpg);
 $background-opacity: 0.9;
 
 @mixin easeOut {
-  transition: all 1.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 @mixin background {

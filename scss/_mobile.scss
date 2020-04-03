@@ -1,9 +1,15 @@
 // widescreen
 @include mediaXl {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // desktop & laptop
 @include mediaLg {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // tablets
@@ -55,6 +61,10 @@
       "job3";
     grid-template-columns: 1fr;
   }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // smartphone
@@ -66,5 +76,9 @@
       font-size: 36px;
       font-weight: 450;
     }
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 }

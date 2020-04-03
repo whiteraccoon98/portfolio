@@ -4,13 +4,13 @@
   top: 35px;
   right: 35px;
   cursor: pointer;
-  transition: all 1.5s ease-out; }
+  transition: all 0.5s ease-out; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: #fff;
-    transition: all 1.5s ease-out; }
+    transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -42,13 +42,13 @@
     padding: 0;
     background: #0e5361;
     list-style: none;
-    transition: all 1.5s ease-out;
+    transition: all 0.5s ease-out;
     transform: translate3d(0, -100%, 0); }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     background: #167;
-    transition: all 1.5s ease-out;
+    transition: all 0.5s ease-out;
     transform: translate3d(0, 100%, 0); }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
@@ -60,7 +60,7 @@
       border: solid 3px #eece1a; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
-    transition: all 1.5s ease-out; }
+    transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
@@ -74,7 +74,7 @@
     font-weight: 300;
     color: #fff;
     text-decoration: none;
-    transition: all 1.5s ease-out; }
+    transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
       color: #eece1a; }
 
@@ -151,7 +151,7 @@ main {
       padding: 0.4rem; }
       main .icons a:hover {
         color: #eece1a;
-        transition: all 1.5s ease-out; }
+        transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
@@ -181,12 +181,49 @@ main {
     padding: 0.5rem;
     border-bottom: #eece1a 5px solid; }
 
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem; }
+  .projects img {
+    width: 100%;
+    border: 3px #fff solid; }
+    .projects img:hover {
+      opacity: 0.5;
+      border-color: #eece1a;
+      transition: all 0.5s ease-out; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #eece1a;
+    color: #000; }
+
+.btn-dark {
+  background: #041a1e;
+  color: #fff; }
+
+.btn-light {
+  background: #1eb3d0;
+  color: #333; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: #0b404a;
   color: #fff;
   height: 60px; }
+
+@media screen and (min-width: 1171) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -216,11 +253,15 @@ main {
       height: 150px; }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; }
     main#home h1.lg-heading {
       font-size: 36px;
-      font-weight: 450; } }
+      font-weight: 450; }
+  .projects {
+    grid-template-columns: 1fr; } }
